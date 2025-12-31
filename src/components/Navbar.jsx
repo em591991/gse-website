@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -23,10 +23,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold text-primary-500 font-heading">GSE</span>
-              <span className="text-sm text-navy-500 font-medium -mt-1">INTEGRATED</span>
-            </div>
+            <img src={logo} alt="GSE Integrated" className="h-12" />
           </Link>
 
           {/* Desktop Navigation */}
