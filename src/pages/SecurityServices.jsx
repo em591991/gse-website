@@ -1,9 +1,10 @@
 import ContactForm from '../components/ContactForm';
+import gssIpadImage from '../assets/GSSipad.jpg';
 
 const SecurityServices = () => {
   const services = [
     {
-      title: 'Burglar Alarms',
+      title: 'Burglar & Perimeter Intrusion Alarms',
       description: 'State-of-the-art intrusion detection systems to protect your home or business from unauthorized entry.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -12,7 +13,7 @@ const SecurityServices = () => {
       ),
     },
     {
-      title: 'Access Control',
+      title: 'Access Control Systems',
       description: 'Manage who enters your property with keypad, card, or biometric access control systems.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -21,7 +22,7 @@ const SecurityServices = () => {
       ),
     },
     {
-      title: 'CCTV Surveillance',
+      title: 'CCTV/Video Surveillance & Remote Monitoring',
       description: 'High-definition video surveillance systems with remote viewing capabilities for complete property monitoring.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,29 +31,21 @@ const SecurityServices = () => {
       ),
     },
     {
-      title: 'Remote Monitoring',
-      description: '24/7 professional monitoring services with immediate response to alerts and emergencies.',
+      title: 'Alarm Panel Service & Sensor Diagnostics',
+      description: 'Professional service, diagnostics, and system upgrades to keep your security running smoothly.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
     },
     {
-      title: 'Smart Home Integration',
+      title: 'Smart Home Automation Integrations',
       description: 'Integrate your security system with smart home devices for seamless control and automation.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Fire & Smoke Detection',
-      description: 'Early warning fire and smoke detection systems to protect lives and property.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
         </svg>
       ),
     },
@@ -65,10 +58,10 @@ const SecurityServices = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Home Security Services
+              Alarm & Security
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your home and business with our comprehensive security solutions. Professional installation and 24/7 monitoring available.
+              Your safety is non-negotiable. Our Alarm & Security Department designs, installs, and maintains protection systems tailored to your needs.
             </p>
           </div>
         </div>
@@ -79,11 +72,38 @@ const SecurityServices = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-white text-lg">
-              Professional Monitoring Starting at{' '}
+              Monitoring Services Available Starting at{' '}
               <span className="text-3xl font-bold">$39.95</span>
               <span className="text-primary-100">/month</span>
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Images Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+              <p className="text-gray-500 text-center px-4">"Secured by GSE Integrated" yard sign</p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img
+                src={gssIpadImage}
+                alt="GSS Security iPad interface"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Approach Text */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            We begin with a site risk assessment — not a one size fits all template. We place cameras, sensors, and controls exactly where they're most effective.
+          </p>
         </div>
       </section>
 
@@ -93,7 +113,7 @@ const SecurityServices = () => {
           <div className="text-center mb-16">
             <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">Security Solutions</span>
             <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-navy-500">
-              Complete Protection For Your Property
+              Our Offerings
             </h2>
           </div>
 

@@ -12,16 +12,16 @@
   --color-primary-800: #062b16;
   --color-primary-900: #03150b;
 
-  --color-navy-50: #e6e9ed;
-  --color-navy-100: #ccd3db;
-  --color-navy-200: #99a7b7;
-  --color-navy-300: #667b93;
-  --color-navy-400: #334f6f;
-  --color-navy-500: #1a365d;
-  --color-navy-600: #152b4a;
-  --color-navy-700: #102038;
-  --color-navy-800: #0a1525;
-  --color-navy-900: #050b13;
+  --color-navy-50: #e8f5ec;
+  --color-navy-100: #d1ebd9;
+  --color-navy-200: #a3d7b3;
+  --color-navy-300: #75c38d;
+  --color-navy-400: #47af67;
+  --color-navy-500: #0d5a2f;
+  --color-navy-600: #0a4825;
+  --color-navy-700: #08361c;
+  --color-navy-800: #052412;
+  --color-navy-900: #031209;
 
   --font-family-sans: 'Inter', 'Montserrat', system-ui, sans-serif;
   --font-family-heading: 'Montserrat', 'Inter', system-ui, sans-serif;

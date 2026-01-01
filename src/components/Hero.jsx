@@ -1,32 +1,38 @@
 import { Link } from 'react-router-dom';
+import droneImage from '../assets/DronePic2png.png';
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-navy-500 via-navy-600 to-navy-700 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+    <section className="relative overflow-hidden pt-20">
+      {/* Full-width drone image background */}
+      <div className="absolute inset-0">
+        <img
+          src={droneImage}
+          alt="GSE Integrated facility aerial view"
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Content */}
-          <div className="text-center lg:text-left">
+          <div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Professional Electrical Services in{' '}
-              <span className="text-primary-400">Baton Rouge, LA</span>
+              Powering Lifelong Trust
             </h1>
-            <p className="mt-6 text-xl text-gray-300 max-w-2xl">
-              We've Got Your Light Bulb Moment Covered.
+            <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto">
+              At GSE Integrated, we bring experience, care, and innovation to your home. We are happy to serve as your one-stop local electrical contractor: from electrical troubleshooting to safeguarding your property with state of the art security systems to keeping your lights on during outages and delivering full electrical buildouts for new construction — we're more than contractors. We're your trusted electrical partner in reliability.
             </p>
-            <p className="mt-4 text-lg text-gray-400 max-w-2xl">
-              Your comprehensive electrical partner offering troubleshooting, security systems,
-              generator services, and new construction electrical work.
+            <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+              Every job—big or small—is backed by licensed professionals, transparent communication, and a relentless commitment to quality. Whether you're a homeowner, business owner, or developer, you can count on us to deliver solutions built to last.
+            </p>
+            <p className="mt-4 text-lg text-primary-300 font-medium max-w-3xl mx-auto">
+              Explore our departments to see how we can serve you — and why customers in the greater Baton Rouge area are choosing GSE Integrated.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/generator-services"
                 className="px-8 py-4 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
@@ -42,7 +48,7 @@ const Hero = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="mt-12 flex flex-wrap gap-6 justify-center lg:justify-start">
+            <div className="mt-12 flex flex-wrap gap-6 justify-center">
               <div className="flex items-center text-gray-300">
                 <svg className="w-5 h-5 mr-2 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -61,26 +67,6 @@ const Hero = () => {
                 </svg>
                 <span>Free Estimates</span>
               </div>
-            </div>
-          </div>
-
-          {/* Hero Image Placeholder */}
-          <div className="hidden lg:block">
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl p-8 shadow-2xl">
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <div className="text-white text-center">
-                    <svg className="w-24 h-24 mx-auto mb-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <p className="text-lg font-semibold">Powering Louisiana</p>
-                    <p className="text-sm opacity-80">Since Day One</p>
-                  </div>
-                </div>
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-400/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-navy-400/20 rounded-full blur-2xl" />
             </div>
           </div>
         </div>

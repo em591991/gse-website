@@ -31,9 +31,8 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-navy-500">
-            What Our Customers Say
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy-500">
+            See What Our Customers Are Saying About Us
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our satisfied customers have to say about our services.
