@@ -134,13 +134,18 @@ const Testimonials = () => {
               <div className="hidden sm:block h-12 w-px bg-gray-200" />
 
               {/* 2025 BBR Gold Winner */}
-              <div className="flex items-center justify-center h-16">
+              <a
+                href="https://www.votebestofbatonrouge.com/listing/gse-integrated.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center h-16 hover:opacity-80 transition-opacity"
+              >
                 <img
                   src={bbrLogo}
                   alt="2025 Best of Baton Rouge Gold Winner"
                   className="h-14 w-auto"
                 />
-              </div>
+              </a>
             </div>
           </div>
 
