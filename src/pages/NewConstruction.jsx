@@ -53,7 +53,7 @@ const NewConstruction = () => {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Construction
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               For architects, builders, and developers, our Construction Department brings an unmatched level of customization with precision and foresight.
             </p>
           </div>
