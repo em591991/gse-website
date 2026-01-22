@@ -1,4 +1,6 @@
 import ContactForm from '../components/ContactForm';
+import meandmaImg from '../assets/MEANDMA.jpg';
+import eavelightsImg from '../assets/eavelights.jpg';
 
 const ElectricalServices = () => {
   const services = [
@@ -35,7 +37,7 @@ const ElectricalServices = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Service Department
+              Electrical Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               At GSE Integrated, our Service Department is your go-to for everyday support, repairs, upgrades, and emergency work across your home, business, or facility.
@@ -48,12 +50,8 @@ const ElectricalServices = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-              <p className="text-gray-500 text-center px-4">Service professional meeting with customer</p>
-            </div>
-            <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-              <p className="text-gray-500 text-center px-4">Home with beautiful eave lighting at night</p>
-            </div>
+            <img src={meandmaImg} alt="Service professional meeting with customer" className="rounded-xl h-64 w-full object-cover" />
+            <img src={eavelightsImg} alt="Home with beautiful eave lighting at night" className="rounded-xl h-64 w-full object-cover" />
           </div>
         </div>
       </section>
