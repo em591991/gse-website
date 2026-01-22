@@ -16,8 +16,12 @@ const Footer = () => {
   ];
 
   const serviceAreas = [
-    'Baton Rouge', 'New Orleans', 'Hammond', 'Mandeville',
-    'Denham Springs', 'Gonzales', 'Prairieville', 'Walker',
+    'Addis', 'Baker', 'Baton Rouge', 'Carville', 'Denham Springs',
+    'Geismar', 'Gonzales', 'Grosse Tete', 'Hammond', 'Jackson',
+    'LaPlace', 'Livingston', 'Mandeville', 'New Roads', 'Plaquemines',
+    'Ponchatoula', 'Port Allen', 'Port Vincent', 'Prairieville',
+    'Slaughter', 'St. Amant', 'St. Francisville', 'St. Gabriel',
+    'St. George', 'Sunshine', 'Walker', 'Watson', 'White Castle', 'Zachary',
   ];
 
   return (
