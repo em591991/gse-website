@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logoWhite from '../assets/logo-white.png';
 
 const Footer = () => {
   const services = [
@@ -26,8 +27,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-6">
-              <span className="text-2xl font-bold text-white font-heading">GSE</span>
-              <span className="block text-sm text-primary-400 font-medium">INTEGRATED</span>
+              <img src={logoWhite} alt="GSE Integrated" className="h-12" />
             </div>
             <p className="text-gray-300 mb-6">
               Your trusted partner for electrical services, security systems, and generator installations in Louisiana.
