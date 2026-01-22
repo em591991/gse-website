@@ -1,6 +1,25 @@
-import bbbSeal from '../assets/bbb-seal.png';
 import hbaLogo from '../assets/HBA-1°-Logo-2.png';
 import bbrLogo from '../assets/2025BBR_GoldWinner.png';
+
+// Custom BBB Badge Component
+const BBBBadge = () => (
+  <svg viewBox="0 0 120 50" className="h-12 w-auto">
+    {/* Background */}
+    <rect x="0" y="0" width="120" height="50" rx="4" fill="#005A8C" />
+    {/* BBB Torch Icon */}
+    <g transform="translate(8, 8) scale(0.7)">
+      <path fill="#ffffff" d="M12 2C12 2 8 6 8 10C8 12.5 9.5 14.5 12 15C14.5 14.5 16 12.5 16 10C16 6 12 2 12 2Z"/>
+      <rect x="10.5" y="15" width="3" height="12" fill="#ffffff"/>
+      <rect x="8" y="27" width="8" height="3" rx="1" fill="#ffffff"/>
+    </g>
+    {/* Text */}
+    <text x="40" y="20" fill="#ffffff" fontSize="14" fontWeight="bold" fontFamily="Arial, sans-serif">BBB</text>
+    <text x="40" y="32" fill="#ffffff" fontSize="7" fontFamily="Arial, sans-serif">ACCREDITED</text>
+    <text x="40" y="42" fill="#ffffff" fontSize="7" fontFamily="Arial, sans-serif">BUSINESS</text>
+    {/* Rating */}
+    <text x="95" y="30" fill="#ffffff" fontSize="12" fontWeight="bold" fontFamily="Arial, sans-serif">A+</text>
+  </svg>
+);
 
 const testimonials = [
   {
@@ -109,11 +128,7 @@ const Testimonials = () => {
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
               >
-                <img
-                  src={bbbSeal}
-                  alt="GSE Integrated BBB Business Review"
-                  className="h-12 w-auto"
-                />
+                <BBBBadge />
               </a>
 
               <div className="hidden sm:block h-16 w-px bg-gray-200" />
