@@ -54,7 +54,7 @@ const About = () => {
     <div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <img
             src={droneImage}
             alt="GSE Integrated facility"
@@ -62,7 +62,7 @@ const About = () => {
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               About GSE Integrated
