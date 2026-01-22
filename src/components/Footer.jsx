@@ -6,8 +6,8 @@ const Footer = () => {
   const services = [
     { name: 'Electrical Services', path: '/electrical-services' },
     { name: 'New Construction', path: '/new-construction' },
-    { name: 'Home Security', path: '/security-services' },
-    { name: 'Generator Services', path: '/generator-services' },
+    { name: 'Alarm & Security', path: '/security-services' },
+    { name: 'Generators', path: '/generator-services' },
   ];
 
   const company = [
