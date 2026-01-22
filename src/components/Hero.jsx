@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import droneImage from '../assets/DronePic2.webp';
 
 const Hero = () => {
@@ -31,21 +30,6 @@ const Hero = () => {
             <p className="mt-4 text-lg text-primary-300 font-medium max-w-3xl mx-auto">
               Explore our departments to see how we can serve you — and why customers in the greater Baton Rouge area are choosing GSE Integrated.
             </p>
-
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/generator-services"
-                className="px-8 py-4 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                Generator Inquiry
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-white text-navy-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                Submit Request
-              </Link>
-            </div>
 
             {/* Trust Badges */}
             <div className="mt-12 flex flex-wrap gap-6 justify-center">
