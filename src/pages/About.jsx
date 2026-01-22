@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import droneImage from '../assets/DronePic1.webp';
 
 const About = () => {
   const values = [
@@ -41,23 +42,32 @@ const About = () => {
   ];
 
   const serviceAreas = [
-    'Baton Rouge', 'New Orleans', 'Hammond', 'Mandeville',
-    'Denham Springs', 'Gonzales', 'Prairieville', 'Walker',
-    'Central', 'Zachary', 'Baker', 'Port Allen',
-    'Slidell', 'Covington', 'Metairie', 'Kenner',
-    'LaPlace', 'Ponchatoula',
+    'Addis', 'Baker', 'Baton Rouge', 'Carville', 'Denham Springs',
+    'Geismar', 'Gonzales', 'Grosse Tete', 'Hammond', 'Jackson',
+    'LaPlace', 'Livingston', 'Mandeville', 'New Roads', 'Plaquemines',
+    'Ponchatoula', 'Port Allen', 'Port Vincent', 'Prairieville',
+    'Slaughter', 'St. Amant', 'St. Francisville', 'St. Gabriel',
+    'St. George', 'Sunshine', 'Walker', 'Watson', 'White Castle', 'Zachary',
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-500 to-navy-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0">
+          <img
+            src={droneImage}
+            alt="GSE Integrated facility"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               About GSE Integrated
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Your trusted partner for electrical services, security systems, and generator installations in Louisiana.
             </p>
           </div>
@@ -86,7 +96,7 @@ const About = () => {
             <div className="bg-gray-50 rounded-xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-white rounded-lg shadow-sm">
-                  <div className="text-4xl font-bold text-primary-500 mb-2">18+</div>
+                  <div className="text-4xl font-bold text-primary-500 mb-2">29</div>
                   <p className="text-gray-600">Service Areas</p>
                 </div>
                 <div className="text-center p-6 bg-white rounded-lg shadow-sm">
