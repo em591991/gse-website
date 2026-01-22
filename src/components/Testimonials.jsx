@@ -1,6 +1,6 @@
 import hbaLogo from '../assets/HBA-1°-Logo-2.png';
 import bbrLogo from '../assets/2025BBR_GoldWinner.png';
-import bbbLogo from '../assets/BBB a+.png';
+import bbbLogo from '../assets/bbb-aplus.png';
 
 const testimonials = [
   {
