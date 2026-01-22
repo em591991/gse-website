@@ -2,6 +2,8 @@ import ConstructionContactForm from '../components/ConstructionContactForm';
 import scaleImage from '../assets/scale.jpg';
 import hallImage from '../assets/Hall Mast and Powder.JPG';
 import scoutguideImage from '../assets/scoutguide.jpg';
+import slabImage from '../assets/slab.jpg';
+import livingRoomImage from '../assets/living room.jpg';
 
 const NewConstruction = () => {
   const services = [
@@ -60,29 +62,7 @@ const NewConstruction = () => {
         </div>
       </section>
 
-      {/* Images Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <img
-                src={scaleImage}
-                alt="Construction scale and blueprints"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <img
-                src={hallImage}
-                alt="Hall mast and powder construction"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
+      {/* Services with Photos */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -92,21 +72,60 @@ const NewConstruction = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Services */}
+            <div className="space-y-6">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                      <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-navy-500 mb-2">{service.title}</h3>
+                      <p className="text-gray-600 text-sm">{service.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-navy-500 mb-2">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
+              ))}
+            </div>
+
+            {/* Right Column - Photos */}
+            <div className="grid grid-cols-2 gap-4 sticky top-24">
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={scaleImage}
+                  alt="Construction blueprints and planning"
+                  className="w-full h-48 object-cover"
+                />
               </div>
-            ))}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={slabImage}
+                  alt="Foundation slab work"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={livingRoomImage}
+                  alt="Finished living room"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={hallImage}
+                  alt="Electrical installation work"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
