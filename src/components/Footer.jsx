@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logoWhite from '../assets/logo-white.png';
-import yelpLogo from '../assets/yelp2.png';
+import yelpLogo from '../assets/yelp1.png';
 
 const Footer = () => {
   const services = [
