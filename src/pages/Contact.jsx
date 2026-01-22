@@ -10,7 +10,7 @@ const Contact = () => {
           <img
             src={droneImage}
             alt="GSE Integrated facility"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
