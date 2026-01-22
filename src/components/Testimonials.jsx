@@ -139,6 +139,19 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
+
+          {/* Licensed & Insured Section */}
+          <div className="mt-8 bg-navy-500 rounded-2xl p-6 sm:p-8 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <svg className="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Louisiana Licensed & Insured</h3>
+            </div>
+            <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              GSE Integrated carries a Louisiana State Electrical License, a Louisiana State Master Plumbing License, and a Louisiana State Fire Marshall Alarm Installer License. All of our technicians maintain current education courses as required by state law. This means you can have peace of mind that you are hiring qualified electricians when you call our Baton Rouge office, and that your home is protected.
+            </p>
+          </div>
         </div>
       </div>
     </section>
