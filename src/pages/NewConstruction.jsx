@@ -10,22 +10,32 @@ const NewConstruction = () => {
     {
       title: 'Full Custom Electrical System Design & Buildout',
       description: 'Complete electrical infrastructure tailored to your specific needs and vision.',
+      image: scaleImage,
+      alt: 'Construction blueprints and planning',
     },
     {
       title: 'Coordination with Other Trades',
       description: 'Seamless coordination with HVAC, plumbing, and other contractors for smooth project execution.',
+      image: slabImage,
+      alt: 'Foundation slab work',
     },
     {
       title: 'Internal Quality Control Checks',
       description: 'On-site QC at every step — we catch issues before the inspectors do and keep your build running smoothly!',
+      image: scoutguideImage,
+      alt: 'Quality control inspection',
     },
     {
       title: 'In-House Low Voltage & Generator Installation',
       description: 'Complete integration of low voltage systems and backup power solutions.',
+      image: hallImage,
+      alt: 'Electrical installation work',
     },
     {
       title: 'Warranty & Follow-Up Support',
       description: 'We don\'t disappear after project turnover — we stay available for tweaks, additions, and long-term service.',
+      image: livingRoomImage,
+      alt: 'Finished living room',
     },
   ];
 
@@ -72,60 +82,23 @@ const NewConstruction = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left Column - Services */}
-            <div className="space-y-6">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                      <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-navy-500 mb-2">{service.title}</h3>
-                      <p className="text-gray-600 text-sm">{service.description}</p>
-                    </div>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              >
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="w-full h-40 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-navy-500 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
-              ))}
-            </div>
-
-            {/* Right Column - Photos */}
-            <div className="grid grid-cols-2 gap-4 sticky top-24">
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src={scaleImage}
-                  alt="Construction blueprints and planning"
-                  className="w-full h-48 object-cover"
-                />
               </div>
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src={slabImage}
-                  alt="Foundation slab work"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src={livingRoomImage}
-                  alt="Finished living room"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src={hallImage}
-                  alt="Electrical installation work"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
