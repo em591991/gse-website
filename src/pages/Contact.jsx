@@ -1,5 +1,5 @@
 import ContactForm from '../components/ContactForm';
-import droneImage from '../assets/DronePic1.webp';
+import droneImage from '../assets/dronepic1png.png';
 
 const Contact = () => {
   return (

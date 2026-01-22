@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import droneImage from '../assets/DronePic1.webp';
+import droneImage from '../assets/dronepic1png.png';
 
 const About = () => {
   const values = [
