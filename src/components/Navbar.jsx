@@ -49,27 +49,21 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-500 hover:bg-gray-100"
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          {/* Mobile buttons */}
+          <div className="lg:hidden flex items-center gap-2">
+            <Link
+              to="/contact"
+              className="px-4 py-2 bg-primary-500 text-white text-sm font-medium rounded-md hover:bg-primary-600 transition-colors duration-200"
             >
-              {isOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+              Submit Request
+            </Link>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-md hover:bg-gray-200 transition-colors duration-200"
+            >
+              {isOpen ? 'Close' : 'Services'}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -90,13 +84,6 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/contact"
-                onClick={() => setIsOpen(false)}
-                className="mt-2 px-5 py-2.5 bg-primary-500 text-white font-medium rounded-md text-center hover:bg-primary-600 transition-colors duration-200"
-              >
-                Submit Request
-              </Link>
             </div>
           </div>
         )}
