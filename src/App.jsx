@@ -6,7 +6,6 @@ import ElectricalServices from './pages/ElectricalServices';
 import NewConstruction from './pages/NewConstruction';
 import SecurityServices from './pages/SecurityServices';
 import GeneratorServices from './pages/GeneratorServices';
-import Reviews from './pages/Reviews';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -22,7 +21,6 @@ function App() {
             <Route path="/new-construction" element={<NewConstruction />} />
             <Route path="/security-services" element={<SecurityServices />} />
             <Route path="/generator-services" element={<GeneratorServices />} />
-            <Route path="/reviews" element={<Reviews />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

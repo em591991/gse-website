@@ -11,7 +11,6 @@ const Navbar = () => {
     { name: 'New Construction', path: '/new-construction' },
     { name: 'Home Security Services', path: '/security-services' },
     { name: 'Generator Services', path: '/generator-services' },
-    { name: 'Reviews', path: '/reviews' },
     { name: 'About Us', path: '/about' },
   ];
 

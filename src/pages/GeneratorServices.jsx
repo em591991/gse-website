@@ -1,4 +1,7 @@
 import ContactForm from '../components/ContactForm';
+import generacLogo from '../assets/generac-logo.png';
+import briggsLogo from '../assets/Briggs&Stratton.png';
+import kohlerLogo from '../assets/Kohler.png';
 
 const GeneratorServices = () => {
   const services = [
@@ -83,6 +86,22 @@ const GeneratorServices = () => {
           <p className="text-lg text-gray-700 leading-relaxed">
             Whether you are looking for a new generator installation, or regular maintenance on an existing one, we will be there for you.
           </p>
+        </div>
+      </section>
+
+      {/* Brands We Service */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-gray-500 uppercase tracking-wider mb-8">Brands We Service</p>
+          <div className="bg-gray-50 rounded-2xl shadow-md p-6 sm:p-8">
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+              <img src={generacLogo} alt="Generac" className="h-12 w-auto" />
+              <div className="hidden sm:block h-12 w-px bg-gray-200" />
+              <img src={briggsLogo} alt="Briggs & Stratton" className="h-12 w-auto" />
+              <div className="hidden sm:block h-12 w-px bg-gray-200" />
+              <img src={kohlerLogo} alt="Kohler" className="h-12 w-auto" />
+            </div>
+          </div>
         </div>
       </section>
 

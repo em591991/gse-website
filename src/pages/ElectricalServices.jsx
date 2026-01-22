@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
 
 const ElectricalServices = () => {
@@ -72,7 +71,7 @@ const ElectricalServices = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-500">We Handle</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-500">Our Services Include:</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
