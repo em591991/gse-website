@@ -1,4 +1,4 @@
-import ContactForm from '../components/ContactForm';
+import ConstructionContactForm from '../components/ConstructionContactForm';
 import scaleImage from '../assets/scale.jpg';
 import hallImage from '../assets/Hall Mast and Powder.JPG';
 import scoutguideImage from '../assets/scoutguide.jpg';
@@ -185,8 +185,8 @@ const NewConstruction = () => {
               </div>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-xl font-bold text-navy-500 mb-6">Get a Free Estimate</h3>
-              <ContactForm />
+              <h3 className="text-xl font-bold text-navy-500 mb-6">Submit Plans for Bid</h3>
+              <ConstructionContactForm />
             </div>
           </div>
         </div>
