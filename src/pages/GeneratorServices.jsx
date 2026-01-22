@@ -97,7 +97,7 @@ const GeneratorServices = () => {
             <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
               <img src={generacLogo} alt="Generac" className="h-12 w-auto" />
               <div className="hidden sm:block h-12 w-px bg-gray-200" />
-              <img src={briggsLogo} alt="Briggs & Stratton" className="h-12 w-auto" />
+              <img src={briggsLogo} alt="Briggs & Stratton" className="h-14 w-auto" />
               <div className="hidden sm:block h-12 w-px bg-gray-200" />
               <img src={kohlerLogo} alt="Kohler" className="h-12 w-auto" />
             </div>
