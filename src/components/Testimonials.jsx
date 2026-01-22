@@ -112,7 +112,7 @@ const Testimonials = () => {
                 <img
                   src={bbbSeal}
                   alt="GSE Integrated BBB Business Review"
-                  className="h-14 w-auto"
+                  className="h-12 w-auto"
                 />
               </a>
 
