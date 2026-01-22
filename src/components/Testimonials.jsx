@@ -118,13 +118,18 @@ const Testimonials = () => {
               <div className="hidden sm:block h-12 w-px bg-gray-200" />
 
               {/* HBA Logo */}
-              <div className="flex items-center justify-center h-16">
+              <a
+                href="https://business.hbagbr.org/directory/Details/gse-integrated-130379"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center h-16 hover:opacity-80 transition-opacity"
+              >
                 <img
                   src={hbaLogo}
                   alt="Home Builders Association"
                   className="h-12 w-auto"
                 />
-              </div>
+              </a>
 
               <div className="hidden sm:block h-12 w-px bg-gray-200" />
 
