@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Electrical Services', path: '/electrical-services' },
-    { name: 'New Construction', path: '/new-construction' },
+    { name: 'Construction', path: '/new-construction' },
     { name: 'Alarm & Security', path: '/security-services' },
     { name: 'Generators', path: '/generator-services' },
     { name: 'About Us', path: '/about' },

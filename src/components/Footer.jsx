@@ -5,7 +5,7 @@ import yelpLogo from '../assets/yelp.png';
 const Footer = () => {
   const services = [
     { name: 'Electrical Services', path: '/electrical-services' },
-    { name: 'New Construction', path: '/new-construction' },
+    { name: 'Construction', path: '/new-construction' },
     { name: 'Alarm & Security', path: '/security-services' },
     { name: 'Generators', path: '/generator-services' },
   ];
