@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logoWhite from '../assets/logo-white.png';
+import yelpLogo from '../assets/yelp.png';
 
 const Footer = () => {
   const services = [
@@ -119,10 +120,8 @@ const Footer = () => {
                     <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
                   </svg>
                 </a>
-                <a href="https://www.yelp.com/biz/gse-integrated-baton-rouge" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.905-4.308a1.072 1.072 0 011.596-.206 9.194 9.194 0 011.81 2.706c.272.658-.08 1.39-.14 2.005zm-3.166 5.324l-4.047-3.016c-.77-.573-.38-1.78.588-1.822l5.03-.201c.582-.023 1.145.372 1.203.94a9.264 9.264 0 01-.397 3.32c-.19.64-.91.98-1.377.779zm-6.497 2.604c-.646.058-1.262-.34-1.39-.946a9.254 9.254 0 01.063-3.334c.14-.648.87-1.013 1.348-.818l4.092 1.668c.812.33.808 1.467-.007 1.794l-4.106 1.636zm-4.747-5.762c-.257.583-.966.845-1.523.564a9.212 9.212 0 01-2.532-2.025c-.443-.516-.387-1.248.123-1.635l3.89-2.948c.697-.528 1.59.18 1.348 1.07l-1.306 4.974zm1.635-9.404a9.212 9.212 0 012.955-1.543c.651-.186 1.318.213 1.42.854l.734 5.036c.14.968-.876 1.66-1.654 1.13l-4.325-2.943c-.566-.385-.615-1.198-.13-1.534z"/>
-                  </svg>
+                <a href="https://www.yelp.com/biz/gse-integrated-baton-rouge" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <img src={yelpLogo} alt="Yelp" className="h-5 w-auto" />
                 </a>
               </div>
             </div>
