@@ -275,9 +275,6 @@ const ConstructionContactForm = () => {
           </div>
         )}
 
-        <p className="mt-2 text-xs text-gray-500">
-          After submitting, please email your plans to <a href="mailto:plans@gseintegrated.com" className="text-primary-500 hover:underline">plans@gseintegrated.com</a>
-        </p>
       </div>
 
       <button
