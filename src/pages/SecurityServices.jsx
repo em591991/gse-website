@@ -122,11 +122,11 @@ const SecurityServices = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 text-center"
+                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
               >
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6 text-primary-500">
                   {service.icon}
