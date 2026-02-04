@@ -115,7 +115,7 @@ const About = () => {
                 className="bg-white rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] text-center"
               >
                 <h3 className="text-xl font-bold text-navy-500 mb-3">{value.title}</h3>
-                <p className="text-gray-600 text-justify">{value.description}</p>
+                <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
           </div>
