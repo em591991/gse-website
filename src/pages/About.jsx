@@ -71,7 +71,7 @@ const About = () => {
                 Founded in 2009, we are a locally owned business serving as your one-stop shop for all electrical needs. With 30 dedicated employees, we are prepared to assist with any residential electrical or low voltage problem, standby generators, remodels, or new construction. We are confident we can deliver an exceptional finished product regardless of the scope of your project. Explore our website to see some of the specifics on what we can offer!
               </p>
               <p className="text-lg text-gray-600">
-                If you'd like to know more about the people you'll interact with at GSE Integrated, we'd love to introduce you to our core values. These are attributes we keep in mind every day when interacting with our customers, and we hold all of our employees to the highest standard in exhibiting them.
+                If you'd like to know more about the people you'll interact with at GSE Integrated, we'd love to introduce you to our core values. These are attributes we live by every day when interacting with our customers, and we hold all of our employees to the highest standard in exhibiting them.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
