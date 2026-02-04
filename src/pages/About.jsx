@@ -28,7 +28,7 @@ const About = () => {
   const serviceAreas = [
     'Addis', 'Baker', 'Baton Rouge', 'Carville', 'Denham Springs',
     'Geismar', 'Gonzales', 'Grosse Tete', 'Hammond', 'Jackson',
-    'LaPlace', 'Livingston', 'Mandeville', 'New Roads', 'Plaquemines',
+    'LaPlace', 'Livingston', 'Mandeville', 'New Roads', 'Plaquemine',
     'Ponchatoula', 'Port Allen', 'Port Vincent', 'Prairieville',
     'Slaughter', 'St. Amant', 'St. Francisville', 'St. Gabriel',
     'St. George', 'Sunshine', 'Walker', 'Watson', 'White Castle', 'Zachary',
