@@ -68,7 +68,7 @@ const About = () => {
                 Licensed Electrical Contractors Serving Louisiana
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in 2009, we are a locally owned business serving as your one-stop shop for all electrical needs. With 30 dedicated employees, we are prepared to assist with any residential electrical or low voltage problem, standby generators, remodels, or new construction. Our technicians have over 215 years of combined electrical experience, so we are confident we can deliver an exceptional finished product regardless of the scope of your project. Explore our website to see some of the specifics on what we can offer!
+                Founded in 2009, we are a locally owned business serving as your one-stop shop for all electrical needs. With 30 dedicated employees, we are prepared to assist with any residential electrical or low voltage problem, standby generators, remodels, or new construction. We are confident we can deliver an exceptional finished product regardless of the scope of your project. Explore our website to see some of the specifics on what we can offer!
               </p>
               <p className="text-lg text-gray-600">
                 If you'd like to know more about the people you'll interact with at GSE Integrated, we'd love to introduce you to our core values. These are attributes we keep in mind every day when interacting with our customers, and we hold all of our employees to the highest standard in exhibiting them.
@@ -108,11 +108,11 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {coreValues.map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
               >
                 <h3 className="text-xl font-bold text-navy-500 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
