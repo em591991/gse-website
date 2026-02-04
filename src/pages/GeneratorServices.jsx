@@ -115,13 +115,13 @@ const GeneratorServices = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
               >
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
                   <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
