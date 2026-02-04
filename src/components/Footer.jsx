@@ -96,7 +96,7 @@ const Footer = () => {
           {/* Service Areas */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Service Areas</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-between gap-y-2">
               {serviceAreas.map((area) => (
                 <span
                   key={area}
