@@ -1,6 +1,6 @@
 import ContactForm from '../components/ContactForm';
 import gssIpadImage from '../assets/GSSipad.jpg';
-import yardSignImage from '../assets/yard sign.JPG';
+import yardSignImage from '../assets/yard-sign.JPG';
 
 const SecurityServices = () => {
   const services = [
