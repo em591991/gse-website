@@ -1,27 +1,40 @@
+import { useState, useEffect, useCallback } from 'react';
 import hbaLogo from '../assets/HBA-1°-Logo-2.png';
 import bbrLogo from '../assets/2025BBR_GoldWinner.png';
 import bbbLogo from '../assets/bbb-aplus.png';
 
-const testimonials = [
+const fallbackReviews = [
   {
     name: 'Marcy M.',
-    role: 'Real Estate Professional',
-    content: 'As a Real Estate Professional, I have used them several times. Always extremely knowledgeable and professional. They take the time to explain everything and provide excellent service.',
+    photoUrl: null,
+    profileUrl: null,
     rating: 5,
+    text: 'As a Real Estate Professional, I have used them several times. Always extremely knowledgeable and professional. They take the time to explain everything and provide excellent service.',
+    relativeTime: '',
+    role: 'Real Estate Professional',
   },
   {
     name: 'Courtney D.',
-    role: 'Homeowner',
-    content: 'They were very professional and did the job quickly. The technicians were very friendly and answered all my questions. Highly recommend their services!',
+    photoUrl: null,
+    profileUrl: null,
     rating: 5,
+    text: 'They were very professional and did the job quickly. The technicians were very friendly and answered all my questions. Highly recommend their services!',
+    relativeTime: '',
+    role: 'Homeowner',
   },
   {
     name: 'Stephen D.',
-    role: 'Business Owner',
-    content: 'The recent work was first class. He was prompt, easy to work with, and the quality of work exceeded my expectations. Will definitely use them again.',
+    photoUrl: null,
+    profileUrl: null,
     rating: 5,
+    text: 'The recent work was first class. He was prompt, easy to work with, and the quality of work exceeded my expectations. Will definitely use them again.',
+    relativeTime: '',
+    role: 'Business Owner',
   },
 ];
+
+const TRUNCATE_LENGTH = 150;
+const AUTO_CYCLE_MS = 8000;
 
 const StarIcon = () => (
   <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -29,7 +42,153 @@ const StarIcon = () => (
   </svg>
 );
 
+const ReviewCard = ({ review }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
+  const needsTruncation = review.text.length > TRUNCATE_LENGTH;
+  const displayText = isExpanded || !needsTruncation
+    ? review.text
+    : review.text.substring(0, TRUNCATE_LENGTH) + '...';
+
+  return (
+    <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+      {/* Star Rating */}
+      <div className="flex mb-4">
+        {[...Array(review.rating)].map((_, i) => (
+          <StarIcon key={i} />
+        ))}
+      </div>
+
+      {/* Review Text */}
+      <p className="text-gray-600 mb-6 italic flex-grow">
+        &ldquo;{displayText}&rdquo;
+        {needsTruncation && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-primary-500 font-medium ml-1 hover:underline"
+          >
+            {isExpanded ? 'show less' : 'read more'}
+          </button>
+        )}
+      </p>
+
+      {/* Reviewer Info */}
+      <div className="flex items-center mt-auto">
+        {review.photoUrl && !imgError ? (
+          <img
+            src={review.photoUrl}
+            alt={review.name}
+            className="w-12 h-12 rounded-full object-cover"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+            <span className="text-primary-500 font-bold text-lg">
+              {review.name.charAt(0)}
+            </span>
+          </div>
+        )}
+        <div className="ml-4">
+          <p className="font-semibold text-navy-500">{review.name}</p>
+          <p className="text-sm text-gray-500">
+            {review.relativeTime || review.role || 'Google Review'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Testimonials = () => {
+  const [reviews, setReviews] = useState(fallbackReviews);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [cardsToShow, setCardsToShow] = useState(3);
+
+  // Fetch reviews from API
+  useEffect(() => {
+    let cancelled = false;
+    async function loadReviews() {
+      try {
+        const res = await fetch('/api/reviews');
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        if (!cancelled && data.reviews && data.reviews.length > 0) {
+          setReviews(data.reviews);
+          setCurrentIndex(0);
+        }
+      } catch {
+        // Silently fall back to hardcoded reviews
+      }
+    }
+    loadReviews();
+    return () => { cancelled = true; };
+  }, []);
+
+  // Responsive card count
+  useEffect(() => {
+    function handleResize() {
+      setCardsToShow(window.innerWidth < 768 ? 1 : 3);
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalSlides = Math.ceil(reviews.length / cardsToShow);
+
+  const goToNext = useCallback(() => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => {
+        const next = prev + cardsToShow;
+        return next >= reviews.length ? 0 : next;
+      });
+      requestAnimationFrame(() => setIsTransitioning(false));
+    }, 300);
+  }, [cardsToShow, reviews.length]);
+
+  const goToPrev = useCallback(() => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => {
+        const prevIdx = prev - cardsToShow;
+        return prevIdx < 0 ? Math.max(0, reviews.length - cardsToShow) : prevIdx;
+      });
+      requestAnimationFrame(() => setIsTransitioning(false));
+    }, 300);
+  }, [cardsToShow, reviews.length]);
+
+  const goToDot = useCallback((dotIndex) => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex(dotIndex * cardsToShow);
+      requestAnimationFrame(() => setIsTransitioning(false));
+    }, 300);
+  }, [cardsToShow]);
+
+  // Auto-cycle
+  useEffect(() => {
+    if (isPaused || reviews.length <= cardsToShow) return;
+    const interval = setInterval(goToNext, AUTO_CYCLE_MS);
+    return () => clearInterval(interval);
+  }, [isPaused, goToNext, reviews.length, cardsToShow]);
+
+  // Get visible reviews with wrap-around
+  const getVisibleReviews = () => {
+    const visible = [];
+    for (let i = 0; i < cardsToShow; i++) {
+      const idx = (currentIndex + i) % reviews.length;
+      visible.push(reviews[idx]);
+    }
+    return visible;
+  };
+
+  const visibleReviews = getVisibleReviews();
+  const currentDot = Math.floor(currentIndex / cardsToShow);
+
   return (
     <section className="py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -43,40 +202,69 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+        {/* Carousel */}
+        <div
+          className="relative"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Left Arrow */}
+          {reviews.length > cardsToShow && (
+            <button
+              onClick={goToPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+              aria-label="Previous reviews"
             >
-              {/* Rating */}
-              <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <StarIcon key={i} />
-                ))}
-              </div>
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          )}
 
-              {/* Content */}
-              <p className="text-gray-600 mb-6 italic">
-                "{testimonial.content}"
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                  <span className="text-primary-500 font-bold text-lg">
-                    {testimonial.name.charAt(0)}
-                  </span>
-                </div>
-                <div className="ml-4">
-                  <p className="font-semibold text-navy-500">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              </div>
+          {/* Cards */}
+          <div className="overflow-hidden mx-8 sm:mx-12">
+            <div
+              className={`grid gap-8 transition-opacity duration-300 ease-in-out ${
+                cardsToShow === 3 ? 'md:grid-cols-3' : 'grid-cols-1'
+              } ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
+            >
+              {visibleReviews.map((review, index) => (
+                <ReviewCard key={`${currentIndex}-${index}`} review={review} />
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Right Arrow */}
+          {reviews.length > cardsToShow && (
+            <button
+              onClick={goToNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+              aria-label="Next reviews"
+            >
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          )}
         </div>
+
+        {/* Dot Indicators */}
+        {totalSlides > 1 && (
+          <div className="flex justify-center gap-2 mt-8">
+            {Array.from({ length: totalSlides }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goToDot(i)}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                  currentDot === i
+                    ? 'bg-primary-500'
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to review page ${i + 1}`}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Credentials Section */}
         <div className="mt-16">
