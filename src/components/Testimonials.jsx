@@ -5,6 +5,24 @@ import bbbLogo from '../assets/bbb-aplus.png';
 
 const fallbackReviews = [
   {
+    name: 'Garylyn Gill',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Thank you GSE for sending Patrick Babin over to install 2 Fandeliers at my home. He was very professional, and so polite. It was truly a pleasure to work with him. 100% satisfaction!',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'John Pacillo',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Installed a Generac generator for me. Handled all the permitting and inspections. Did a great job. Looks professionally installed.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
     name: 'Marcy M.',
     photoUrl: null,
     profileUrl: null,
@@ -14,13 +32,49 @@ const fallbackReviews = [
     role: 'Real Estate Professional',
   },
   {
+    name: 'Jonathon S.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Technician was able to troubleshoot and solve our issue quickly at a reasonable cost. Highly recommend!',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Nathan & Amy LaPorte',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Timely and very professional. Installer was great and cleaned everything up afterwards.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
     name: 'Courtney D.',
     photoUrl: null,
     profileUrl: null,
     rating: 5,
-    text: 'They were very professional and did the job quickly. The technicians were very friendly and answered all my questions. Highly recommend their services!',
+    text: 'They were very professional and did the job quickly. They cleaned up when they were done and were very friendly. I would definitely recommend GSE for any electrical job.',
     relativeTime: '',
     role: 'Homeowner',
+  },
+  {
+    name: 'Mark T.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Rob did a great job! Fast, efficient, and quality workmanship. When encountering a small problem replacing a recessed light in my master shower, he quickly came up with a solution.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Aiesha B.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Leon installed two electric chargers at my residence. He was prompt, polite, and prepared! 10/10 service.',
+    relativeTime: '',
+    role: 'Google Review',
   },
   {
     name: 'Stephen D.',
@@ -30,6 +84,87 @@ const fallbackReviews = [
     text: 'The recent work was first class. He was prompt, easy to work with, and the quality of work exceeded my expectations. Will definitely use them again.',
     relativeTime: '',
     role: 'Business Owner',
+  },
+  {
+    name: 'Alex S.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'GSE is a great company. I contacted them to repair some outlets that did not work and quote two new outdoor outlets. Jordan was at my house quickly and did excellent work.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'P Tyson',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Pat was quick and professional. Happy to have working lights again.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Todd C.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Rob and Leon from GSE were great. They were actually early for the appointment and completed it in record time. I am very impressed with their work.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Barb B.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Jordan and Leon did an excellent job installing my 30 amp outlet on the exterior of my house. They were quick and professional and left the area clean.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Zach K.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Jordan was great! Clear communication and willing to explain things to someone with no experience in electricity. Would highly recommend.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Iván F.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Rob was very professional. I am very pleased with the work he did. He installed a ChargePoint charger hardwired on a 60 amp circuit breaker. Great job!',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Evita B.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Rob assisted me with my electrical needs. He was so educated on my issue and was so quick to resolve my problem. He made me feel like I was his only customer.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Jack J.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Leon from GSE did professional work for me at my residence installing an attic light and switch. GSE has done work for me before. I would not hesitate to call them again.',
+    relativeTime: '',
+    role: 'Google Review',
+  },
+  {
+    name: 'Michael C.',
+    photoUrl: null,
+    profileUrl: null,
+    rating: 5,
+    text: 'Rob got here on time and was able to take care of several items that I had asked to be fixed. He explained what he was doing and communicated clearly throughout.',
+    relativeTime: '',
+    role: 'Google Review',
   },
 ];
 
@@ -107,7 +242,7 @@ const Testimonials = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [cardsToShow, setCardsToShow] = useState(3);
 
-  // Fetch reviews from API
+  // Fetch reviews from API and merge with hardcoded ones
   useEffect(() => {
     let cancelled = false;
     async function loadReviews() {
@@ -116,7 +251,11 @@ const Testimonials = () => {
         if (!res.ok) throw new Error('API error');
         const data = await res.json();
         if (!cancelled && data.reviews && data.reviews.length > 0) {
-          setReviews(data.reviews);
+          const hardcodedNames = new Set(fallbackReviews.map((r) => r.name.toLowerCase()));
+          const freshReviews = data.reviews.filter(
+            (r) => !hardcodedNames.has(r.name.toLowerCase())
+          );
+          setReviews([...freshReviews, ...fallbackReviews]);
           setCurrentIndex(0);
         }
       } catch {
