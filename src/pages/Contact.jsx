@@ -75,7 +75,9 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-navy-500">Location</h3>
-                    <p className="text-gray-600">Baton Rouge, LA 70817</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=6441+Jones+Creek+Rd,+Baton+Rouge,+LA+70817" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-500 transition-colors">
+                      6441 Jones Creek Rd, Baton Rouge, LA 70817
+                    </a>
                   </div>
                 </div>
 
@@ -88,22 +90,24 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-navy-500">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-600">Saturday: By Appointment</p>
+                    <p className="text-gray-600">Monday - Friday: 7:30 AM - 3:30 PM</p>
                     <p className="text-primary-500 font-medium">24/7 Emergency Service Available</p>
                   </div>
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="mt-8 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p>Map - Baton Rouge, LA</p>
-                </div>
+              {/* Google Map */}
+              <div className="mt-8 rounded-xl overflow-hidden h-64">
+                <iframe
+                  title="GSE Integrated Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.5!2d-91.023!3d30.385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8626a5e4b0f3e8e7%3A0x0!2s6441+Jones+Creek+Rd%2C+Baton+Rouge%2C+LA+70817!5e0!3m2!1sen!2sus!4v1700000000000"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
 

@@ -46,6 +46,13 @@ const ConstructionContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formData.email && !formData.phone) {
+      setStatus('error');
+      setErrorMessage('Please provide either an email address or phone number.');
+      return;
+    }
+
     setStatus('sending');
     setErrorMessage('');
 
@@ -146,13 +153,12 @@ const ConstructionContactForm = () => {
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-            Email Address *
+            Email Address <span className="text-xs text-gray-500">(email or phone required)</span>
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            required
             value={formData.email}
             onChange={handleChange}
             disabled={status === 'sending'}
