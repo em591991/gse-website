@@ -2,42 +2,26 @@ import { Link } from 'react-router-dom';
 import droneImage from '../assets/dronepic1png.png';
 
 const About = () => {
-  const values = [
+  const coreValues = [
     {
-      title: 'Quality Workmanship',
-      description: 'We take pride in every job, ensuring work is done right the first time.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-        </svg>
-      ),
+      title: 'White-Glove Experience',
+      description: 'Everyone will be treated with the utmost respect. Our goal is to give an exceptional customer service experience from the initial phone call through project completion. As the experts, we want to ensure you have peace of mind \u2013 we will take the stress so you don\u2019t have to.',
     },
     {
-      title: 'Customer Focus',
-      description: 'Your satisfaction is our priority. We listen, communicate, and deliver.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
+      title: 'Absolute Integrity',
+      description: 'Everyone at GSE Integrated will conduct themselves with integrity, with no exceptions. We will communicate open and honestly, we will do the right thing when no one is looking, and we will always follow through on our commitments.',
     },
     {
-      title: 'Safety First',
-      description: 'All work meets or exceeds safety codes and industry standards.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
+      title: 'Thrive with the Hive',
+      description: 'Given the wide range of electrical projects we take on, teamwork in our company is imperative. Everyone at GSE is available to help one another. You may meet one technician at your home, but there is always a line of other employees ready to assist them in bringing your project to completion.',
     },
     {
-      title: 'Integrity',
-      description: 'Honest pricing, clear communication, and no hidden surprises.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-        </svg>
-      ),
+      title: 'Evolve or Dissolve',
+      description: 'We always stay on the forefront of new technologies our industry presents. Whether it is smart-home technology, generators that we can monitor remotely to know about issues before you do, or simply improving our craftsmanship, we aim to stay on the cutting edge. All of our technicians undergo regular training and complete coursework needed to maintain licensing.',
+    },
+    {
+      title: 'Relentless',
+      description: 'Simply put, we will work hard to achieve your vision. We will overcome any obstacles during a job, and we will not accept failure. We take pride in finding a solution where it may seem one is not always possible.',
     },
   ];
 
@@ -84,13 +68,10 @@ const About = () => {
                 Licensed Electrical Contractors Serving Louisiana
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                GSE Integrated is a licensed electrical contractor based in Baton Rouge, Louisiana. We specialize in residential and commercial electrical services, security systems, and generator installations.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                Our team of experienced electricians is committed to providing high-quality workmanship and exceptional customer service. Whether you need a simple repair or a complete electrical system installation, we have the expertise to get the job done right.
+                Founded in 2009, we are a locally owned business serving as your one-stop shop for all electrical needs. With 30 dedicated employees, we are prepared to assist with any residential electrical or low voltage problem, standby generators, remodels, or new construction. Our technicians have over 215 years of combined electrical experience, so we are confident we can deliver an exceptional finished product regardless of the scope of your project. Explore our website to see some of the specifics on what we can offer!
               </p>
               <p className="text-lg text-gray-600">
-                We proudly serve Baton Rouge and surrounding communities throughout Louisiana, bringing professional electrical solutions to homes and businesses across the region.
+                If you'd like to know more about the people you'll interact with at GSE Integrated, we'd love to introduce you to our core values. These are attributes we keep in mind every day when interacting with our customers, and we hold all of our employees to the highest standard in exhibiting them.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
@@ -117,29 +98,61 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Core Values */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">Our Values</span>
             <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-navy-500">
-              What Sets Us Apart
+              Our Core Values
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {coreValues.map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6 text-primary-500">
-                  {value.icon}
-                </div>
                 <h3 className="text-xl font-bold text-navy-500 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community Outreach */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">Giving Back</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-navy-500">
+              Community Outreach
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+              GSE Integrated is committed to engaging with our neighbors and finding ways to give back. As a local company based out of Baton Rouge, we pride ourselves on being an active part of our community.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-gray-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-navy-500 mb-4">St. Jude Dream Home Giveaway</h3>
+              <p className="text-lg text-gray-600 mb-6">
+                We are proud to be an ongoing part of the local St. Jude Dream Home Giveaway, which raises over $1,000,000 annually to support St. Jude Children's Research Hospital in their goal to end childhood cancer.
+              </p>
+              {/* TODO: Add picture of the completed home(s) and other proof of involvement */}
+              <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center text-gray-500">
+                <p className="text-center px-4">Photo of completed St. Jude Dream Home coming soon</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-navy-500 mb-4">Adopt-A-Charger Program</h3>
+              <p className="text-lg text-gray-600">
+                GSE Integrated is also committed to helping Louisiana improve its infrastructure and decrease its carbon footprint by embracing electrical vehicle initiatives. We are partnered with the state-funded Adopt-A-Charger program which provides EV chargers around Louisiana in various public areas, available for use free of charge.
+              </p>
+            </div>
           </div>
         </div>
       </section>
