@@ -15,19 +15,11 @@ const Footer = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
-  const serviceAreas = [
-    'Addis', 'Baker', 'Baton Rouge', 'Carville', 'Denham Springs',
-    'Geismar', 'Gonzales', 'Grosse Tete', 'Hammond', 'Jackson',
-    'LaPlace', 'Livingston', 'Mandeville', 'New Roads', 'Plaquemines',
-    'Ponchatoula', 'Port Allen', 'Port Vincent', 'Prairieville',
-    'Slaughter', 'St. Amant', 'St. Francisville', 'St. Gabriel',
-    'St. George', 'Sunshine', 'Walker', 'Watson', 'White Castle', 'Zachary',
-  ];
 
   return (
     <footer className="bg-navy-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           {/* Company Info */}
           <div>
             <div className="mb-6">
@@ -93,20 +85,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Service Areas */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Service Areas</h3>
-            <div className="flex flex-wrap justify-between gap-y-2">
-              {serviceAreas.map((area) => (
-                <span
-                  key={area}
-                  className="text-sm text-gray-300 bg-navy-500 px-3 py-1 rounded-full"
-                >
-                  {area}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
