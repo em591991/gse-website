@@ -1,5 +1,6 @@
 import ContactForm from '../components/ContactForm';
 import gssIpadImage from '../assets/GSSipad.jpg';
+import yardSignImage from '../assets/yard sign.JPG';
 
 const SecurityServices = () => {
   const services = [
@@ -84,8 +85,12 @@ const SecurityServices = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-              <p className="text-gray-500 text-center px-4">"Secured by GSE Integrated" yard sign</p>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img
+                src={yardSignImage}
+                alt="Secured by GSE Integrated yard sign"
+                className="w-full h-64 object-cover"
+              />
             </div>
             <div className="rounded-xl overflow-hidden shadow-lg">
               <img
