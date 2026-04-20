@@ -91,13 +91,13 @@ const ElectricalServices = () => {
           <div className="mt-12 text-center">
             <p className="text-xl text-gray-700 mb-4">...and more!</p>
             <a
-              href="tel:2255290330"
+              href="tel:2256158131"
               className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              Give Us a Call: (225) 529-0330
+              Give Us a Call: (225) 615-8131
             </a>
           </div>
         </div>

@@ -19,10 +19,10 @@ const CTA = () => {
               Submit Request
             </Link>
             <a
-              href="tel:2255290330"
+              href="tel:2256158131"
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-500 transition-all duration-200"
             >
-              Call (225) 529-0330
+              Call (225) 615-8131
             </a>
           </div>
         </div>
