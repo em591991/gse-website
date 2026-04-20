@@ -2,6 +2,9 @@ import ContactForm from '../components/ContactForm';
 import generacLogo from '../assets/generac-logo.png';
 import briggsLogo from '../assets/Briggs&Stratton.png';
 import kohlerLogo from '../assets/Kohler.png';
+import austinImage from '../assets/austin.JPG';
+import eliImage from '../assets/eli.JPG';
+import genTruckImage from '../assets/gen truck.JPG';
 
 const GeneratorServices = () => {
   const services = [
@@ -53,28 +56,51 @@ const GeneratorServices = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-500 to-navy-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img
+            src={genTruckImage}
+            alt="GSE generator truck"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Generator Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               When the power goes out, our Generator Department ensures your home stays bright, cool, and functional. Our team is committed to year-round, around-the-clock service to support you in your time of need.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Image Placeholder Section */}
+      {/* Pricing Banner */}
+      <section className="bg-primary-500 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-white text-lg">
+              Maintenance Plans Starting at{' '}
+              <span className="text-3xl font-bold">$325</span>
+              <span className="text-primary-100">/year</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Section */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-              <p className="text-gray-500 text-center px-4">GSE truck pulling Generac trailer</p>
+            <div className="bg-gray-100 rounded-xl h-64 overflow-hidden">
+              <img src={austinImage} alt="Austin" className="w-full h-full object-cover" />
             </div>
-            <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-              <p className="text-gray-500 text-center px-4">Generac generator installed outside home</p>
+            <div className="bg-gray-100 rounded-xl h-64 overflow-hidden">
+              <img src={eliImage} alt="Eli" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
