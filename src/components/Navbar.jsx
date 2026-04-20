@@ -40,22 +40,26 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
+            <a
+              href="https://form.jotform.com/261097041504147"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-4 px-5 py-2.5 bg-primary-500 text-white font-medium rounded-md hover:bg-primary-600 transition-colors duration-200"
             >
               Submit Request
-            </Link>
+            </a>
           </div>
 
           {/* Mobile buttons */}
           <div className="lg:hidden flex items-center gap-2">
-            <Link
-              to="/contact"
+            <a
+              href="https://form.jotform.com/261097041504147"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 bg-primary-500 text-white text-sm font-medium rounded-md hover:bg-primary-600 transition-colors duration-200"
             >
               Submit Request
-            </Link>
+            </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-md hover:bg-gray-200 transition-colors duration-200"

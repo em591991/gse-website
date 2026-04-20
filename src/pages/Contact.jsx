@@ -1,3 +1,4 @@
+import ContactForm from '../components/ContactForm';
 import droneImage from '../assets/dronepic1png.png';
 
 const Contact = () => {
@@ -113,14 +114,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-gray-50 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-navy-500 mb-6">Submit a Request</h2>
-              <iframe
-                title="GSE Integrated Service Request Form"
-                src="https://form.jotform.com/212435721876055"
-                frameBorder="0"
-                scrolling="yes"
-                className="w-full"
-                style={{ width: '100%', minHeight: '600px', height: '700px', border: 'none' }}
-              />
+              <ContactForm />
             </div>
           </div>
         </div>
