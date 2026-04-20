@@ -10,6 +10,7 @@ import GeneratorServices from './pages/GeneratorServices';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SubmitRequest from './pages/SubmitRequest';
+import Employment from './pages/Employment';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,6 +36,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/submit-request" element={<SubmitRequest />} />
+            <Route path="/employment" element={<Employment />} />
           </Routes>
         </main>
         <Footer />
