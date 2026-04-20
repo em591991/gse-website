@@ -43,7 +43,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/submit-request"
-              className="ml-4 px-5 py-2.5 bg-primary-500 text-white font-medium rounded-md hover:bg-primary-600 transition-colors duration-200"
+              className="ml-4 px-5 py-2 bg-primary-500 text-white text-sm font-medium rounded-md hover:bg-primary-600 transition-colors duration-200"
             >
               Submit Request
             </Link>
