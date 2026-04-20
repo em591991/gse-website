@@ -32,7 +32,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+                className={`w-40 py-2 text-sm font-medium text-center rounded-md transition-colors duration-200 ${
                   isActive(link.path)
                     ? 'text-primary-500 bg-primary-50'
                     : 'text-gray-700 hover:text-primary-500 hover:bg-gray-50'
