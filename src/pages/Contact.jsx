@@ -1,4 +1,3 @@
-import ContactForm from '../components/ContactForm';
 import droneImage from '../assets/dronepic1png.png';
 
 const Contact = () => {
@@ -28,8 +27,8 @@ const Contact = () => {
 
       {/* Contact Content */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div>
             {/* Contact Info */}
             <div>
               <h2 className="text-3xl font-bold text-navy-500 mb-8">Get In Touch</h2>
@@ -111,11 +110,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-gray-50 rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-navy-500 mb-6">Submit a Request</h2>
-              <ContactForm />
-            </div>
           </div>
         </div>
       </section>
