@@ -1,6 +1,7 @@
 import ContactForm from '../components/ContactForm';
 import gssIpadImage from '../assets/GSSipad.jpg';
 import yardSignImage from '../assets/yard-sign.JPG';
+import lanceCamImage from '../assets/lancecam1.JPG';
 
 const SecurityServices = () => {
   const services = [
@@ -55,13 +56,23 @@ const SecurityServices = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-500 to-navy-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img
+            src={lanceCamImage}
+            alt="GSE security camera installation"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Alarm & Security
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Your safety is non-negotiable. Our Alarm & Security Department designs, installs, and maintains protection systems tailored to your needs.
             </p>
           </div>
