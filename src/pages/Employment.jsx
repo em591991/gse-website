@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import droneBannerImage from '../assets/DronePicBannerpng.png';
 
 const Employment = () => {
   const benefits = [
@@ -115,13 +116,23 @@ const Employment = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-500 to-navy-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img
+            src={droneBannerImage}
+            alt="GSE Integrated facility aerial view"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Join Our Team
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Build your career with GSE Integrated. We're always looking for skilled, dedicated professionals to join our growing team.
             </p>
           </div>
