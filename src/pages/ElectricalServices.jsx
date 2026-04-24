@@ -1,6 +1,7 @@
 import ContactForm from '../components/ContactForm';
 import meandmaImg from '../assets/MEANDMA.jpg';
 import eavelightsImg from '../assets/eavelights.jpg';
+import mikeMountImg from '../assets/mike mount.JPG';
 
 const ElectricalServices = () => {
   const services = [
@@ -33,13 +34,23 @@ const ElectricalServices = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-500 to-navy-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img
+            src={meandmaImg}
+            alt="GSE Integrated service team"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Electrical Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               At GSE Integrated, our Service Department is your go-to for everyday support, repairs, upgrades, and emergency work across your home, business, or facility.
             </p>
           </div>
@@ -50,7 +61,7 @@ const ElectricalServices = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            <img src={meandmaImg} alt="Service professional meeting with customer" className="rounded-xl h-64 w-full object-cover" />
+            <img src={mikeMountImg} alt="Electrician performing service work" className="rounded-xl h-64 w-full object-cover" />
             <img src={eavelightsImg} alt="Home with beautiful eave lighting at night" className="rounded-xl h-64 w-full object-cover" />
           </div>
         </div>
