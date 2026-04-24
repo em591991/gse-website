@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import droneImage from '../assets/dronepic1png.png';
+import adoptAChargerImage from '../assets/AdoptACharger.jpg';
+import stJudeImage from '../assets/st jude.jpg';
 
 const About = () => {
   const coreValues = [
@@ -141,17 +143,23 @@ const About = () => {
               <p className="text-lg text-gray-600 mb-6">
                 We are proud to be an ongoing part of the local St. Jude Dream Home Giveaway, which raises over $1,000,000 annually to support St. Jude Children's Research Hospital in their goal to end childhood cancer.
               </p>
-              {/* TODO: Add picture of the completed home(s) and other proof of involvement */}
-              <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center text-gray-500">
-                <p className="text-center px-4">Photo of completed St. Jude Dream Home coming soon</p>
-              </div>
+              <img
+                src={stJudeImage}
+                alt="Completed St. Jude Dream Home"
+                className="rounded-lg h-48 w-full object-cover"
+              />
             </div>
 
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-navy-500 mb-4">Adopt-A-Charger Program</h3>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 mb-6">
                 GSE Integrated is also committed to helping Louisiana improve its infrastructure and decrease its carbon footprint by embracing electrical vehicle initiatives. We are partnered with the state-funded Adopt-A-Charger program which provides EV chargers around Louisiana in various public areas, available for use free of charge.
               </p>
+              <img
+                src={adoptAChargerImage}
+                alt="Adopt-A-Charger EV charging station"
+                className="rounded-lg h-48 w-full object-cover"
+              />
             </div>
           </div>
         </div>
