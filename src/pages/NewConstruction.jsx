@@ -43,7 +43,7 @@ const NewConstruction = () => {
     'Review your blueprint drawings together',
     'Ask detailed questions, make adjustments, and get your input on how the final layout should look',
     'Position switches, outlets, lighting, and special features exactly where you want them',
-    'Help you incorporate custom touches — from accent lighting and smart switches to niche features you may not even have thought of',
+    'Help you incorporate custom touches — from accent lighting and smart switches to niche features you may not have considered',
   ];
 
   return (
@@ -110,12 +110,12 @@ const NewConstruction = () => {
             <div className="text-center mb-12">
               <p className="text-primary-500 font-bold text-xl italic mb-4">"From blueprint to brilliance"</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-500">
-                Pre Electrical Consultations (PECs)
+                Pre-Electrical Consultations (PECs)
               </h2>
             </div>
 
             <p className="text-lg text-gray-700 mb-8 text-center">
-              At GSE Integrated, before a single wire is pulled, we begin custom home builds with our signature Pre Electrical Consultations (PECs) — a dedicated design session with our customer and builder. In this meeting we:
+              At GSE Integrated, before a single wire is pulled, we begin custom home builds with our signature Pre-Electrical Consultations (PECs) — a dedicated design session with our customer and builder. In this meeting we:
             </p>
 
             <div className="bg-gray-50 rounded-xl p-8 mb-8">
