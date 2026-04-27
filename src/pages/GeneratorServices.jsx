@@ -103,10 +103,10 @@ const GeneratorServices = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-100 rounded-xl h-64 overflow-hidden">
-              <img src={austinImage} alt="Austin" className="w-full h-full object-cover" />
+              <img src={austinImage} alt="Austin, GSE Integrated generator technician" className="w-full h-full object-cover" />
             </div>
             <div className="bg-gray-100 rounded-xl h-64 overflow-hidden">
-              <img src={eliImage} alt="Eli" className="w-full h-full object-cover" />
+              <img src={eliImage} alt="Eli, GSE Integrated generator technician" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
