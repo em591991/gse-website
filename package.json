@@ -25,9 +25,15 @@
       "/submit-request",
       "/apply"
     ],
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "inlineCss": false,
-    "minifyHtml": { "collapseWhitespace": false, "removeComments": false }
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    }
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -50,6 +56,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "sharp": "^0.34.5",
     "vite": "^7.2.4"
   },
   "overrides": {
