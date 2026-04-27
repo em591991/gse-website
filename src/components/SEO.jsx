@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://gseintegrated.com';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 const SEO = ({ title, description, path = '/', image = DEFAULT_OG_IMAGE, type = 'website' }) => {
   const url = `${SITE_URL}${path}`;
