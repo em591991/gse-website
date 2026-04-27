@@ -53,6 +53,6 @@
     "vite": "^7.2.4"
   },
   "overrides": {
-    "puppeteer": "^22.0.0"
+    "puppeteer": "13.7.0"
   }
 }
