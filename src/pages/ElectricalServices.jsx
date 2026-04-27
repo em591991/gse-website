@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 import meandmaImg from '../assets/MEANDMA.jpg';
 import eavelightsImg from '../assets/eavelights.jpg';
 import mikeMountImg from '../assets/mike mount.JPG';
@@ -33,6 +34,11 @@ const ElectricalServices = () => {
 
   return (
     <div>
+      <SEO
+        title="Electrical Services in Baton Rouge | GSE Integrated"
+        description="Residential and commercial electrical services in Baton Rouge. Licensed Louisiana electricians for repairs, upgrades, panel installations, and more."
+        path="/electrical-services"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

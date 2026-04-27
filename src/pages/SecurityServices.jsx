@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 import gssIpadImage from '../assets/GSSipad.jpg';
 import yardSignImage from '../assets/yard-sign.JPG';
 import lanceCamImage from '../assets/lancecam1.JPG';
@@ -55,6 +56,11 @@ const SecurityServices = () => {
 
   return (
     <div>
+      <SEO
+        title="Alarm & Security Systems Baton Rouge | GSE Integrated"
+        description="Professional security system design, installation, and monitoring in Baton Rouge. Cameras, access control, and smart home integration."
+        path="/security-services"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

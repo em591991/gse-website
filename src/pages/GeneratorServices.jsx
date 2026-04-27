@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 import generacLogo from '../assets/generac-logo.png';
 import briggsLogo from '../assets/Briggs&Stratton.png';
 import kohlerLogo from '../assets/Kohler.png';
@@ -55,6 +56,11 @@ const GeneratorServices = () => {
 
   return (
     <div>
+      <SEO
+        title="Generator Installation & Maintenance Baton Rouge | GSE Integrated"
+        description="Authorized Generac dealer in Baton Rouge. Generator installation, repair, and maintenance plans starting at $325/year."
+        path="/generator-services"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

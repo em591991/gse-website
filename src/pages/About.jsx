@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import droneImage from '../assets/dronepic1png.png';
 import adoptAChargerImage from '../assets/AdoptACharger.jpg';
 import stJudeImage from '../assets/st jude.jpg';
@@ -38,6 +39,11 @@ const About = () => {
 
   return (
     <div>
+      <SEO
+        title="About GSE Integrated | Baton Rouge Electricians Since 2009"
+        description="Family-owned electrical contracting company serving the greater Baton Rouge area since 2009. 30 dedicated employees. Licensed and insured."
+        path="/about"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 z-0">

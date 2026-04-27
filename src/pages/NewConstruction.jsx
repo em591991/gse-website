@@ -1,4 +1,5 @@
 import ConstructionContactForm from '../components/ConstructionContactForm';
+import SEO from '../components/SEO';
 import scaleImage from '../assets/scale.jpg';
 import hallImage from '../assets/Hall Mast and Powder.JPG';
 import scoutguideImage from '../assets/scoutguide.jpg';
@@ -48,6 +49,11 @@ const NewConstruction = () => {
 
   return (
     <div>
+      <SEO
+        title="New Construction Electrical | GSE Integrated Baton Rouge"
+        description="Pre-electrical, rough-in, and trim-out electrical services for new construction in the greater Baton Rouge area."
+        path="/new-construction"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

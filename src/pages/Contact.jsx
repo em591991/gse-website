@@ -1,8 +1,14 @@
+import SEO from '../components/SEO';
 import droneImage from '../assets/dronepic1png.png';
 
 const Contact = () => {
   return (
     <div>
+      <SEO
+        title="Contact GSE Integrated | Baton Rouge Electrician"
+        description="Get in touch with GSE Integrated. Call (225) 615-8131 or visit us at 6441 Jones Creek Rd, Baton Rouge, LA 70817."
+        path="/contact"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 z-0">

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import droneBannerImage from '../assets/DronePicBannerpng.png';
 
 const Employment = () => {
@@ -115,6 +116,11 @@ const Employment = () => {
 
   return (
     <div>
+      <SEO
+        title="Careers at GSE Integrated | Join Our Team"
+        description="Join the GSE Integrated team. Competitive pay, health insurance, 401(k), and more. Apply now for electrician and technician positions in Baton Rouge."
+        path="/employment"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}
