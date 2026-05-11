@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import SchemaMarkup from '../components/SchemaMarkup';
+import { buildBreadcrumbSchema } from '../data/schemas';
 import droneBannerImage from '../assets/DronePicBannerpng.png';
 
 const Employment = () => {
@@ -121,6 +123,10 @@ const Employment = () => {
         description="Join the GSE Integrated team. Competitive pay, health insurance, 401(k), and more. Apply now for electrician and technician positions in Baton Rouge."
         path="/employment"
       />
+      <SchemaMarkup schema={buildBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Careers', url: '/employment' },
+      ])} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

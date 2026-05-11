@@ -1,5 +1,7 @@
 import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
+import SchemaMarkup from '../components/SchemaMarkup';
+import { buildBreadcrumbSchema } from '../data/schemas';
 import gssIpadImage from '../assets/GSSipad.jpg';
 import yardSignImage from '../assets/yard-sign.JPG';
 import lanceCamImage from '../assets/lancecam1.JPG';
@@ -61,6 +63,10 @@ const SecurityServices = () => {
         description="Professional security system design, installation, and monitoring in Baton Rouge. Cameras, access control, and smart home integration."
         path="/security-services"
       />
+      <SchemaMarkup schema={buildBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Alarm & Security', url: '/security-services' },
+      ])} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

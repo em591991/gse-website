@@ -12,6 +12,8 @@ import Contact from './pages/Contact';
 import SubmitRequest from './pages/SubmitRequest';
 import Employment from './pages/Employment';
 import Apply from './pages/Apply';
+import SchemaMarkup from './components/SchemaMarkup';
+import { siteSchemaGraph } from './data/schemas';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,6 +27,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <SchemaMarkup schema={siteSchemaGraph} />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">

@@ -1,5 +1,7 @@
 import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
+import SchemaMarkup from '../components/SchemaMarkup';
+import { buildBreadcrumbSchema } from '../data/schemas';
 import meandmaImg from '../assets/MEANDMA.jpg';
 import eavelightsImg from '../assets/eavelights.jpg';
 import mikeMountImg from '../assets/mike mount.JPG';
@@ -39,6 +41,10 @@ const ElectricalServices = () => {
         description="Residential and commercial electrical services in Baton Rouge. Licensed Louisiana electricians for repairs, upgrades, panel installations, and more."
         path="/electrical-services"
       />
+      <SchemaMarkup schema={buildBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Electrical Services', url: '/electrical-services' },
+      ])} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

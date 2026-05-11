@@ -1,5 +1,7 @@
 import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
+import SchemaMarkup from '../components/SchemaMarkup';
+import { buildBreadcrumbSchema } from '../data/schemas';
 import generacLogo from '../assets/generac-logo.png';
 import briggsLogo from '../assets/Briggs&Stratton.png';
 import kohlerLogo from '../assets/Kohler.png';
@@ -61,6 +63,10 @@ const GeneratorServices = () => {
         description="Authorized Generac dealer in Baton Rouge. Generator installation, repair, and maintenance plans starting at $325/year."
         path="/generator-services"
       />
+      <SchemaMarkup schema={buildBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Generators', url: '/generator-services' },
+      ])} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         {/* Background image */}

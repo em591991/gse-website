@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
+import SchemaMarkup from '../components/SchemaMarkup';
+import { buildBreadcrumbSchema } from '../data/schemas';
 import droneImage from '../assets/dronepic1png.png';
 
 const SubmitRequest = () => {
@@ -12,6 +14,10 @@ const SubmitRequest = () => {
         description="Request electrical, security, or generator services from GSE Integrated in Baton Rouge."
         path="/submit-request"
       />
+      <SchemaMarkup schema={buildBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Contact', url: '/submit-request' },
+      ])} />
       {/* Back Button */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

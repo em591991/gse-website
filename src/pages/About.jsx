@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import SchemaMarkup from '../components/SchemaMarkup';
+import { buildBreadcrumbSchema } from '../data/schemas';
 import droneImage from '../assets/dronepic1png.png';
 import adoptAChargerImage from '../assets/AdoptACharger.jpg';
 import stJudeImage from '../assets/st jude.jpg';
@@ -44,6 +46,10 @@ const About = () => {
         description="Family-owned electrical contracting company serving the greater Baton Rouge area since 2009. 30 dedicated employees. Licensed and insured."
         path="/about"
       />
+      <SchemaMarkup schema={buildBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'About', url: '/about' },
+      ])} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 z-0">

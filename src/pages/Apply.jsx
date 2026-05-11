@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
+import SchemaMarkup from '../components/SchemaMarkup';
+import { buildBreadcrumbSchema } from '../data/schemas';
 import droneImage from '../assets/dronepic1png.png';
 
 const Apply = () => {
@@ -12,6 +14,11 @@ const Apply = () => {
         description="Submit your application to join the GSE Integrated team in Baton Rouge."
         path="/apply"
       />
+      <SchemaMarkup schema={buildBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Careers', url: '/employment' },
+        { name: 'Apply', url: '/apply' },
+      ])} />
       {/* Back Button */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
