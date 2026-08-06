@@ -30,6 +30,7 @@
       "--disable-setuid-sandbox"
     ],
     "inlineCss": false,
+    "skipThirdPartyRequests": true,
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": false
