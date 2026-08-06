@@ -19,6 +19,9 @@
 
     <!-- Meta Pixel Code -->
     <script>
+    // Skipped during react-snap prerender: the snippet injects a <script> node that
+    // would be serialized into the static HTML and then run before fbq is defined.
+    if (navigator.userAgent !== 'ReactSnap') {
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -29,6 +32,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '2020936961759848');
     fbq('track', 'PageView');
+    }
     </script>
     <!-- End Meta Pixel Code -->
   </head>
